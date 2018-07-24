@@ -1,0 +1,34 @@
+React notes, should have started this earlier -_-
+
+Basic React uses a couple different pieces.
+  -index.html (basic HTML to insert our react into)
+  -src/index.js (brings the page together and inserts it into the HTML DOM)
+
+After this there are components, each component has display information at minimum
+NOTE: components do NOT need to extend React Components, they can simply be a const function.
+
+Class Components will also need to be aware of other components and have their own state,
+this is initialized in the constructor.
+
+ie. constructor()
+{
+  this.state = {
+  piece1: null,
+  piece2: 4
+  }
+}
+
+calling super(props) will inherit the props.
+
+The components being described are "dumb components" and do not integrate with Redux.
+
+Components that integrate with Redux AKA "smart components" are actually called containers.
+--------------------------------------------------------------------------------------------------
+
+Containers are used to couple together reducers and components, because redux will be handing the
+data you will want to link them together so that you can access the overall state information.
+
+to do this you need to...
+  -include connect from react-redux
+  -make use of the mapStateToProps function.
+  -at the bottom write, "export default connect(mapStateToProps)(ComponentClassName)"
