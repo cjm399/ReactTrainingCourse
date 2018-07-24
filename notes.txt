@@ -32,3 +32,19 @@ to do this you need to...
   -include connect from react-redux
   -make use of the mapStateToProps function.
   -at the bottom write, "export default connect(mapStateToProps)(ComponentClassName)"
+
+  -----------------------------------------------------------------------------------------------
+
+  Redux serves to construct the app state, react provides the views to view the state.
+
+Flow!
+1. Page is created.
+2. User interacts with page in some way.
+3. Action is created that is reflective of the interaction.
+4. Action is sent to all reducers (like a signal)
+5. Reducers check if it is an action they care about.
+6. Reducers change data based on the action.
+7. mapStateToProps on all containers runs
+8. all containers rerender
+9. Page is different
+10. repeat
