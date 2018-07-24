@@ -41,7 +41,7 @@ Flow!
 1. Page is created.
 2. User interacts with page in some way.
 3. Action is created that is reflective of the interaction.
-4. Action is sent to all reducers (uses action title like a signal, otherwise has object of data)
+4. Action is sent to all reducers (uses action type like a signal, otherwise has object of data)
 5. Reducers check if it is an action they care about.
 6. Reducers change data based on the action.
 7. mapStateToProps on all containers runs
@@ -54,4 +54,4 @@ THIS PROCESS IS DESCRIBED IN SECTION 4 LECTURE 44
 -------------------------------------------------------------------------------------------------
 
 after action function is created, need a way to get the actions to all reducers.
-Look to mapDispatchToProps(dispatch) to see how to do this. 
+Look to mapDispatchToProps(dispatch) to see how to do this.
